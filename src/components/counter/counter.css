@@ -1,0 +1,8 @@
+.productList{
+    display:flex;
+    margin: 20px;
+}
+.title{
+    display:flex;
+    justify-content: flex-start;
+}
