@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import AppRouter from './components/AppRouter';
 import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 ReactDOM.render(<AppRouter />, document.getElementById('root'));
 

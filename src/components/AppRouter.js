@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
 import './App.css';
+import {BrowserRouter as Router , Route,withRouter,Switch} from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from '../store';
 import Login from './Login/Login';
 import DashBoard from './dashBoard/dashBoard';
-import {BrowserRouter as Router , Route} from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from '../store'
+import AddItemcategories from './AddItemcategories/AddItemcategories';
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <Provider store={store}>
+      <Provider store={store}>    
           <Router>
             <div>
-               <Route path="/" exact component={Login} />
-               <Route path="/dashboard" component={DashBoard} />
+            <Switch>
+               <Route path="/" exact component={withRouter(Login)}/>
+               <Route path="/dashboard" component={withRouter(DashBoard)}/>
+               <Route path="/selectitem/:itemId" component={withRouter(AddItemcategories)}/>
+            </Switch>
             </div>
-          </Router>
-        
+          </Router>   
       </Provider>
       </div>
     );

@@ -6,9 +6,74 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./images/back-image.jpg')
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.flex-container {
+  display: flex;
+  align-content: flex-end;
+}
+
+.flex-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.margin-text{
+  margin: 0px 30px;
+}
+
+.margin-tab-card{
+  margin: 30px 30px;
+}
+
+.card-details .card-width{
+  width: 20rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+.categories-block{
+  width: 80%;
+  margin: auto;
+}
+
+.image-block{
+  margin:20px 0px 0px;
+}
+
+.image-block img{
+  width: 150px;
+}
+
+a,a:hover, a:focus, a:active {
+  text-decoration: none !important;
+  color:#000000 !important;
+}
+
+.back-to-lastView{
+  width:10%;
+  margin: 20px;
+}
+
+.overlay {
+  position: fixed;
+  /* full screen */
+  width: 100vw;
+  height: 100vh;
+  top: 64px;
+  /* transparent black */
+  background: rgba(0, 0, 0, 0.7);
+  /* middle layer, i.e. appears below the sidebar */
+  z-index: 998;
+  opacity: 1;
+  /* animate the transition */
+  transition: all 0.5s ease-in-out;
 }

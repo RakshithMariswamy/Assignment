@@ -6,3 +6,7 @@
     display:flex;
     justify-content: flex-start;
 }
+.prize-list{
+    text-align: center;
+    font-weight: bold;
+}

@@ -3,33 +3,28 @@ import './counter.css'
 
 
 class Counter extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        tags: ['tag1','tag2','tag3'] }
-    }
-
-    
+ 
     getCountInfo = () =>{
-        return this.props.count.value === 0 ? 'zero': this.props.count.value;
+        return this.props.count.product_Quantity === 0 ? 'zero': this.props.count.product_Quantity;
     }
    
 
     getBadgesClasses() {
         let badgeClasses = 'badge m-2 badge-';
-        badgeClasses += (this.props.count.value === 0) ? 'warning' : 'primary';
+        badgeClasses += (this.props.count.product_Quantity === 0) ? 'warning' : 'primary';
         return badgeClasses;
     }
 
     render() { 
         return ( 
         <React.Fragment >
-            <div className="title">{this.props.children}</div>
-        < div className="productList">
+            <div className="prize-list">
+            <label> Prize: </label><span>{this.props.count.product_price}</span>
+            </div>     
+        <div className="productList">
             <button className="btn btn-secondary btn-sm" onClick={() => this.props.onIncrement(this.props.count)}>+</button>
             <span className={this.getBadgesClasses()}>{this.getCountInfo()}</span>
             <button className="btn btn-secondary btn-sm" onClick={() => this.props.decrementCount(this.props.count)}>-</button>
-            <button onClick={() =>this.props.onDelete(this.props.count)}className="btn btn-danger btn-sm m-2">Delete</button>
         </div> 
         </React.Fragment> );
     }

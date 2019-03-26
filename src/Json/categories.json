@@ -1,0 +1,56 @@
+[
+  {
+    "categories_id": 901,
+    "categories_name": "Clothes",
+    "categories_image": "/image/icons8-clothes-90.png",
+    "categories_Type": "main"
+  },
+  {
+    "categories_id": 902,
+    "categories_name": "Electronics",
+    "categories_image": "/image/icons8-multiple-devices-filled-100.png",
+    "categories_Type": "main"
+  },
+  {
+    "categories_id": 903,
+    "categories_name": "Tv's & Appliance",
+    "categories_image": "/image/icons8-retro-tv-filled-100.png",
+    "categories_Type": "main"
+  },
+  {
+    "categories_id": 904,
+    "categories_name": "Home & Furniture's",
+    "categories_image": "/image/icons8-home-filled-100.png",
+    "categories_Type": "main"
+  },
+  {
+    "categories_id": 905,
+    "categories_name": "Sport's",
+    "categories_image": "/image/icons8-skiing-filled-100.png",
+    "categories_Type": "main"
+  },
+  {
+    "categories_id": 906,
+    "categories_name": "Book's",
+    "categories_image": "/image/icons8-books-filled-100.png",
+    "categories_Type": "main"
+  },
+  {
+    "categories_id": 907,
+    "categories_name": "Grocery",
+    "categories_image": "/image/icons8-ingredients-filled-100.png",
+    "categories_Type": "main"
+  },
+  {
+    "categories_id": 908,
+    "categories_name": "Music",
+    "categories_image": "/image/icons8-musical-notes-filled-100.png",
+    "categories_Type": "main"
+  },
+  {
+    "categories_id": 909,
+    "categories_name": "Movie",
+    "categories_image": "/image/icons8-clapperboard-filled-100.png",
+    "categories_Type": "main"
+  }
+]

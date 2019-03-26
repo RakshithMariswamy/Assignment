@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import {  withRouter} from 'react-router-dom';
-import myLogo from '../../image/myLogo.png';
+import myLogo from '../../images/codeMfarmLogo.png';
 import './navBar.css';
+import SideBar from '../sideBar/sideBar';
 
 class  NavBar extends Component {
- 
+
+  state = { sideBar : false}
 
     logoutInfo(){
         localStorage.removeItem('userInfo');
@@ -14,12 +16,22 @@ class  NavBar extends Component {
     backToDashBoard(){
       this.props.history.push('/dashboard');
     }
+
     render() { 
-        return (  <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div className="nav-in-opt">
-            <img onClick={() => this.backToDashBoard()} src={myLogo} className="nav-logo-img co" alt="Logo"></img>
-            <button type="button" className="btn btn-outline-success float-right btn-lg btn-size" onClick={() => this.logoutInfo()}>Logout</button>
+        return (  <nav className="navbar navbar-expand-lg navbar-bcg-col">
+          <div className="nav-in-opt flex-container">
+            
+            <img onClick={() => this.backToDashBoard()} src={myLogo} className="nav-logo-img" alt="Logo"></img>
+            <div className="flex-stretch"></div>
+            <button type="button" className="btn btn-info btn-size" onClick={()=>this.props.orderInforMation()}>
+                <span>Order Details</span>
+            </button>
+            <button type="button" className="btn btn-primary btn-size margin-text">
+                  Notifications <span className="badge badge-light">4</span>
+            </button>
+            <button type="button" className="btn btn-logout-outline  btn-lg btn-size" onClick={() => this.logoutInfo()}>Logout</button>
           </div>
+          <SideBar openCloseBar={this.props.orderDetails}/>
       </nav> );
     }
 }

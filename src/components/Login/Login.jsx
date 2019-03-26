@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './Login.css';
-import userImage from '../../image/download.png';
 //import {withRouter} from 'react-router-dom';
 import { credentials } from '../../actions/credentialActions';
-import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 class Login extends Component {
      state ={
          userName : '',
@@ -42,14 +41,10 @@ class Login extends Component {
         this.setState({ [e.target.name]: e.target.value });
     }
     render() { 
-        console.log(this.props)
         return ( 
             <React.Fragment>
            <div>
-                <div className="imgcontainer">
-                 <img src={userImage} alt="Avatar" className="avatar"/>
-                </div>
-                <div className="container-login">
+                <div className="container-login flex-container-centerDiv">
                   <form onSubmit={()=> this.verifyCredential()}>              
                      <label htmlFor="uname"><b>Username</b></label>
                      <input type="text" placeholder="Enter Username" name="userName"  onChange={(e)=> this.handleChange(e) } value={this.state.userName} required/>

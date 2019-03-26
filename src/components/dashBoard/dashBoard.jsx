@@ -1,22 +1,44 @@
 import React, { Component } from 'react';
-import NavBar from '../navBar/navBar'
+import NavBar from '../navBar/navBar';
+import Categories from '../categories/categories';
+import authenticationCheck  from '../../services/authenticationCheck';
+import { categoriesListCall } from '../../actions/credentialActions';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 
 class DashBoard extends Component {
-    state = {  }
-
+    state = { sideBar : false}
+  
     //WARNING! To be deprecated in React v17. Use componentDidMount instead.
     componentWillMount() {
-        if(localStorage.getItem('userInfo') == null) {
-            this.props.history.push('/');
-        }
+        authenticationCheck();
     }
+    componentDidMount(){
+        this.props.categoriesListCall();
+     }
+
+     overViewOrder(){
+        this.setState({sideBar : !this.state.sideBar});
+      }
+
     render() { 
         return (  
         <React.Fragment>
-           <NavBar></NavBar>
-
+            {this.state.sideBar?<div className="overlay"></div>:<div></div>}
+           <NavBar {...this.props} orderInforMation={()=> this.overViewOrder()} orderDetails= {this.state.sideBar}/> 
+           <Categories categories = {this.props.categoriesInfo} {...this.props} />
         </React.Fragment>);
     }
 }
  
-export default DashBoard;
+Categories.propTypes = {
+    categoriesListCall: PropTypes.func.isRequired,
+    categoriesInfo: PropTypes.array.isRequired
+  }
+  
+  const mapStateToProps = state => ({
+    categoriesInfo : state.credenInfo.categoriesList
+  });
+  
+  export default connect(mapStateToProps,{categoriesListCall})(DashBoard);

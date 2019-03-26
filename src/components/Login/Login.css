@@ -1,5 +1,4 @@
 body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
 
 input[type=text], input[type=password] {
   width: 100%;
@@ -11,7 +10,7 @@ input[type=text], input[type=password] {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #272822;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -50,9 +49,12 @@ span.psw {
 }
 
 .container-login {
-   width:600px;
-   border: 1px solid #4CAF50;
-   margin: auto ;
+   width:37%;
+   background-color: #ffffff;
+   border: 1px solid #272822;
+   position: absolute;
+   top: 30%;
+   left: 30%;
 }
 
 

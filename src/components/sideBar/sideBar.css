@@ -1,0 +1,64 @@
+#sidebar {
+    width: 45%;
+    position: fixed;
+    top: 71px;
+    right: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #272822;
+    color: #fff;
+    transition: all 0.3s;
+    overflow:scroll;
+  }
+
+.sidebar-header{
+    margin:20px;
+    text-align: center;
+    border-bottom: 1px solid #47748b;    
+}
+
+
+.div-table {
+  display: table;    
+  text-align:center;     
+  width: 90%;
+  margin: 30px;           
+  padding: 20px 0;  
+  border-bottom: 1px solid #47748b; 
+  border-spacing: 5px; /* cellspacing:poor IE support for  this */
+}
+.div-table-row {
+  display: table-row;
+  width: auto;
+  border-bottom: 1px solid #ddd;
+  clear: both;
+  font-size: 1.1em;
+}
+.div-table-header{
+  font-weight: bold;
+}
+.div-table-col {
+  float: left; /* fix for  buggy browsers */
+  display: table-column;         
+  width: 100px;     
+}
+.total-amount-display{
+  margin:30px;
+}
+
+.radio-spacing{
+  margin:10px;
+}
+
+.space-between-radio{
+  margin-right:10px;
+}
+
+.button-space{
+  margin:60px 0px;
+}
+
+.radio-buttons{
+  display: flex;
+  justify-content: center;
+}
