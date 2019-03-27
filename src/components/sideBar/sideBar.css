@@ -3,18 +3,24 @@
     position: fixed;
     top: 71px;
     right: 0;
-    height: 100vh;
+    height: 90vh;
     z-index: 999;
     background: #272822;
     color: #fff;
     transition: all 0.3s;
-    overflow:scroll;
+    overflow:auto;
+  }
+
+  #printable-area{
+    background: #272822;
+    color: #fff;
+    transition: all 0.3s;
   }
 
 .sidebar-header{
     margin:20px;
     text-align: center;
-    border-bottom: 1px solid #47748b;    
+    border-bottom: 3px solid #47748b;    
 }
 
 
@@ -24,13 +30,13 @@
   width: 90%;
   margin: 30px;           
   padding: 20px 0;  
-  border-bottom: 1px solid #47748b; 
+  border-bottom: 3px solid #47748b; 
   border-spacing: 5px; /* cellspacing:poor IE support for  this */
 }
 .div-table-row {
   display: table-row;
   width: auto;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #47748b;
   clear: both;
   font-size: 1.1em;
 }
@@ -40,7 +46,10 @@
 .div-table-col {
   float: left; /* fix for  buggy browsers */
   display: table-column;         
-  width: 100px;     
+  width: 100px;    
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
 }
 .total-amount-display{
   margin:30px;
@@ -61,4 +70,18 @@
 .radio-buttons{
   display: flex;
   justify-content: center;
+}
+
+.check{
+  display:none;
+}
+
+.orderdetails-info{
+   width: 50%;
+   text-align: left;
+}
+
+.orderDetails-main{
+  margin: 20px;
+  border-bottom: 2px solid #47748b; 
 }

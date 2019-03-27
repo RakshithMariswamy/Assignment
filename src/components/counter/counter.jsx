@@ -22,9 +22,9 @@ class Counter extends Component {
             <label> Prize: </label><span>{this.props.count.product_price}</span>
             </div>     
         <div className="productList">
-            <button className="btn btn-secondary btn-sm" onClick={() => this.props.onIncrement(this.props.count)}>+</button>
+        <button className="btn btn-secondary btn-sm" onClick={() => this.props.decrementCount(this.props.count)}>-</button>
             <span className={this.getBadgesClasses()}>{this.getCountInfo()}</span>
-            <button className="btn btn-secondary btn-sm" onClick={() => this.props.decrementCount(this.props.count)}>-</button>
+        <button className="btn btn-secondary btn-sm" onClick={() => this.props.onIncrement(this.props.count)}>+</button>
         </div> 
         </React.Fragment> );
     }

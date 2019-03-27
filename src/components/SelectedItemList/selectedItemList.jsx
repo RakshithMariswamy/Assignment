@@ -4,7 +4,7 @@ class SelectedItemList extends Component {
     state = {  }
     render() { 
         const {selectedToBuy }= this.props;
-        return (   <div className="div-table">
+        return (   <div id="selectedItemList" className="div-table">
         <div className="div-table-row  div-table-header" >
               <div className="div-table-col">Item</div>
               <div className="div-table-col">Quantity</div>
@@ -14,7 +14,7 @@ class SelectedItemList extends Component {
           {selectedToBuy.map((chart) => 
             chart.product_Quantity != 0 ?
             <div className="div-table-row" key={chart.product_id}>
-            <div className="div-table-col">{chart.categories_name}</div>
+            <div className="div-table-col" title={chart.categories_name}>{chart.categories_name}</div>
             <div className="div-table-col">{chart.product_Quantity}</div>
             <div className="div-table-col">{chart.product_price}</div>
             <div className="div-table-col">{chart.product_Quantity * chart.product_price}</div>

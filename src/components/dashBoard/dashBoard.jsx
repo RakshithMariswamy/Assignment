@@ -20,6 +20,11 @@ class DashBoard extends Component {
 
      overViewOrder(){
         this.setState({sideBar : !this.state.sideBar});
+        if(this.state.sideBar){
+          document.body.style.overflow = 'auto';
+      } else {
+          document.body.style.overflow = 'hidden';
+      }
       }
 
     render() { 
